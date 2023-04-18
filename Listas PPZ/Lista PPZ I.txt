@@ -1,0 +1,73 @@
+Pedro Henrique de Souza - 1° DSM - Lista de exercicios I Python para Zumbis
+
+1)
+n1=int(input("Digite o primeiro número: "))
+n2=int(input("Digite o segundo número: "))
+print("Resultado:" ,(n1+n2))
+------------------------------------------------------------------------------------------------------
+2)
+metros=float(input("Digite o valor em metros: "))
+milímetros=print("Resultado em milímetros:" ,metros*1000, "milímetros")
+------------------------------------------------------------------------------------------------------
+3)
+d = int(input('Dias: '))
+h = int(input('horas: '))
+m = int(input('Minutos: '))
+s = int(input('Segundos: '))
+t = d*60*60*24+h*60*60+m*60+s
+print("total em segundos", t)
+------------------------------------------------------------------------------------------------------
+4)
+salario=float(input("Digite seu salário: "))
+porcentagem=float(input("Digite o aumento em %: "))
+aumento= salario * porcentagem/100
+ns= salario + aumento
+print(f'Aumento: R$ {aumento: .2f}')
+print(f'Novo salário: R$ {ns: .2f}')
+------------------------------------------------------------------------------------------------------
+5)
+p=float(input("Preço da mercadoria: "))
+d=float(input("desconto em %: "))
+vd= p * d/100
+total = p - vd
+print(f'Valor do desconto: R$ {vd: .2f}')
+print(f'Valor final: R$ {total: .2f}')
+------------------------------------------------------------------------------------------------------
+6)
+d=float(input("Distância a ser percorrida em km: "))
+v=float(input("Velocidade média em km/h: "))
+print("o tempo da viagem será: ",d/v,"h")
+------------------------------------------------------------------------------------------------------
+7)
+f=float(input("Temperatura em °C: "))
+c=f*9/5+32
+print("Temperatura em °F: ",c)
+------------------------------------------------------------------------------------------------------
+8)
+c=float(input("Temperatura em °F: "))
+f=(c-32)*5/9
+print("Temperatura em °C: ",f)
+------------------------------------------------------------------------------------------------------
+9)
+km=float(input("Km percorrido: "))
+d=int(input("Dias alugados: "))
+vkm=km*0.15
+vd=d*60
+total=vd+vkm
+print("Valor a ser pago no fim é: R$",total)
+------------------------------------------------------------------------------------------------------
+10)
+cd=float(input("Quantos cigarros são fumados por dia: "))
+af=float(input("Quantos anos fumando: "))
+afd=af*365
+dp=afd/144
+print(f'Dias perdidos: {dp: .2f}')
+------------------------------------------------------------------------------------------------------
+11)
+import sys
+sys.set_int_max_str_digits(0)
+conversao=len(str(2**1000000))
+print("O número de algarismos na operação 2 elevado a 1.000.000 é: ",conversao)
+
+
+

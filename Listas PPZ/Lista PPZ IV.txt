@@ -1,0 +1,80 @@
+Pedro Henrique de Souza 1° DSM Lista PPZ IV
+
+1) 
+from random import sample
+vetor = sample(range(100), 10)
+maior = menor = vetor[0]
+for x in vetor[1:]:
+  if x > maior: maior = x
+  if x < menor: menor = x
+print ('Números sorteados:', vetor)
+print (f'Maior deles: {maior}')
+print (f'Menor deles: {menor}')
+------------------------------------------------------------------------------------------------------
+2)
+from random import sample
+N = sample(range(100), 20)
+pares = []
+ímpares = []
+for x in N:
+  if x % 2 == 0:
+    pares.append(x)
+  else:
+    ímpares.append(x)
+print ('Números sorteados', N)
+print ('Números Pares', pares)
+print ('Números Ímpares', ímpares)
+------------------------------------------------------------------------------------------------------
+3)
+from random import sample
+v1 = sample(range(100), 10)
+v2 = sample(range(100), 10)
+v3 = []
+for x in zip(v1, v2):
+  v3.extend(list(x))
+print('Vetor 1:', v1)
+print('Vetor 2:', v2)
+print('Vetor 3:', v3)
+------------------------------------------------------------------------------------------------------
+4)
+t = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()
+import string
+for c in string.punctuation:
+  t = t.replace(c, ' ')
+  
+K = []
+for p in t.split():
+  if p[0] in 'python' or p[-1] in 'python':
+    K.append(p)
+    
+print (K)
+------------------------------------------------------------------------------------------------------
+5)
+t = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to help
+   each other live up to these principles. We want our
+   community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()
+
+import string
+for c in string.punctuation:
+  t = t.replace(c, ' ')
+  
+def pitônica(x):
+  for c in x:
+    if c in 'python':
+      return True
+  return False
+
+K = [p for p in t.split()
+        if pitônica(p) and len(p) > 4]
+print (K)
+print (len(K))

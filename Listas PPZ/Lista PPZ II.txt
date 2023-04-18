@@ -1,0 +1,78 @@
+Pedro Henrique de Souza, 1° DSM, Lista de exercicios Python Para Zumbis II
+
+1)
+a=float(input("Tamanho do lado 1: "))
+b=float(input("Tamanho do lado 2: "))
+c=float(input("Tamanho do lado 3: "))
+if (a + b < c) or (a + c < b) or (b + c < a):
+        print('Nao é um triangulo')
+elif (a == b) and (a == c) :
+        print('Equilatero')
+elif (a==b) or (a==c) or (b==c):
+        print('Isósceles')
+else:
+        print('Escaleno')
+------------------------------------------------------------------------------------------------------
+2)
+ano = int(input("Digite o ano: "))
+if ano % 100 != 0 and ano % 4 == 0 or ano % 400 == 0:
+    print("O ano é bissexto")
+else:
+    print("O ano não é bissexto")
+------------------------------------------------------------------------------------------------------
+3)
+peso=int(input("Peso dos peixes: "))
+excesso=peso-50
+multa= excesso*4
+if excesso > 0:
+    print("Seu excesso foi de",excesso,"kg")
+    print("Valor da multa é: R$",multa)
+else:
+    print("Está na lei, sem multa para você")
+------------------------------------------------------------------------------------------------------
+4)
+n1=float(input("Digite o primeiro número: "))
+n2=float(input("Digite o segundo número: "))
+n3=float(input("Digite o terceiro número: "))
+if n2<n1>n3:
+    print("O primeiro número é o maior")
+if n1<n2>n3:
+    print("O segundo número é o maior")
+if n1<n3>n2:
+    print("O terceiro número é o maior")
+------------------------------------------------------------------------------------------------------
+5)
+n1=float(input("Digite o primeiro número: "))
+n2=float(input("Digite o segundo número: "))
+n3=float(input("Digite o terceiro número: "))
+if n2>n1<n3:
+    print("O primeiro número é o menor")
+if n1>n2<n3:
+    print("O segundo número é o menor")
+if n1>n3<n2:
+    print("O terceiro número é o menor")
+------------------------------------------------------------------------------------------------------
+6)
+hr=float(input("Valor da hora trabalhada: R$"))
+ht=float(input("Horas trabalhadas no mês: "))
+sb=hr*ht
+ir=sb*0.11
+inss=sb*0.08
+s=sb*0.05
+sl=sb-ir-inss-s
+print("+Salário Bruto: R$",sb)
+print("-IR(11%): R$",ir)
+print("-INSS(8%): R$",inss)
+print("-Sindicato(5%): R$",s)
+print("Salário Liquido: R$",sl)
+------------------------------------------------------------------------------------------------------
+7)
+m=int(input("Area em metros quadrados: "))
+if m%54==0:
+    l=m/54
+else:
+    l = int(m/54)+1
+v=l*80
+print(f'{l}l')
+print(f'Total: R$ {v:.2f}')
+------------------------------------------------------------------------------------------------------
